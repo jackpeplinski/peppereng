@@ -1,19 +1,12 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { StaticQuery, graphql } from 'gatsby';
-import GitHubButton from 'react-github-btn';
 import Link from './link';
 import Loadable from 'react-loadable';
 import config from '../../config.js';
 import LoadingProvider from './mdxComponents/loading';
 import { DarkModeSwitch } from './DarkModeSwitch';
-
 import Sidebar from './sidebar';
-
-const LoadableComponent = Loadable({
-  loader: () => import('./search/index'),
-  loading: LoadingProvider,
-});
 
 function myFunction() {
   var x = document.getElementById('navbar');
