@@ -32,6 +32,9 @@ const plugins = [
         },
         {
           resolve: 'gatsby-remark-copy-linked-files'
+        },
+        {
+          resolve:'gatsby-remark-katex',
         }
       ],
       extensions: [".mdx", ".md"]
