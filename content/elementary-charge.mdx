@@ -1,0 +1,66 @@
+---
+title: "Elementary Charge"
+metaTitle: "This is the title tag of this page"
+metaDescription: "This is the meta description"
+---
+
+import Dropdown from "../src/components/mdxComponents/dropdown";
+import "katex/dist/katex.min.css";
+import { InlineMath, BlockMath } from "react-katex";
+
+Elementary charge ($e$ or $q_e$) is the magnitude of charge carried by one electron or proton.
+
+
+$$
+|q_e|=|e|= 1.602176634×10^{-19} C
+$$
+
+$$
+|q_e|=|e|≈1.6×10^{-19} C
+$$
+
+- All charges are integers of the elementary charge.
+- The following particles charges are:
+
+| Atomic Particle | Elementary Charge | Coulomb Charge (approx.) |
+| --------------- | ----------------- | ------------------------ |
+| Proton          | +1e               | $+1.6×10^{-19} C$        |
+| Neutron         | 0e                | 0                        |
+| Electron        | -1e               | $-1.6×10^{-19} C$        |
+
+# Problems
+<Dropdown
+  title={["To start a car engine, the car battery moves ", <InlineMath math="3.75×10^{21}"/>, " electrons through the starter motor. How many coulombs of charge were moved?"]}
+  body={[<BlockMath math="Charge = number\space of \space \cancel{single \space electrons} × \frac{charge}{\cancel{single \space electron}}"/>,
+  <BlockMath math="Q=N|e|"/>,
+  <BlockMath math="Q = 3.75×10^{21} \cancel{electrons} \times \frac{1.6×10^{-19} C}{\cancel{electron}}"/>,
+  <BlockMath math="Q=601 C"/>
+  ]}
+/>
+<Dropdown
+  title={["A 2.5-g copper penny is given a charge of ",<InlineMath math="-2.0×10^{-9} C"/>," (a) How many excess electrons are on the penny? (b) By what percent do the excess electrons change the mass of the penny?"]}
+  body={[
+    "a)",
+    <BlockMath math="Charge = number\space of \space \cancel{single \space electrons} × \frac{charge}{\cancel{single \space electron}}"/>,
+    <BlockMath math="Q=N|e|"/>,
+    <BlockMath math="N=\frac{Q}{e}"/>,
+    <BlockMath math="N=\frac{-2.0×10^{-9} C}{1.6×10^{-19} \frac{C}{electron}}"/>,
+    <BlockMath math="N=1.2\times10^{10} electrons"/>,
+    "b)",
+    <BlockMath math="total \space mass \space of \space all \space electrons \space on \space penny= \frac{mass}{\cancel{single \space electron}} \times number \space of \space \cancel{single \space electrons}"/>,
+    <BlockMath math="M = m_eN"/>,
+    <BlockMath math="  = (9.11\times10^{-31} \frac{kg}{\cancel{single \space electron}})(1.2\times10^{-10} \cancel{single \space electrons} )"/>,
+    <BlockMath math="  = \boxed{1.1\times10^{-20} kg}"/>,
+    <BlockMath math="\frac{total \space mass \space of \space all \space electrons \space on \space penny}{total \space mass \space of \space penny}\times 100\% = percent \space of \space total \space mass \space of \space all \space electrons \space on \space penny"/>,
+    <BlockMath math="\frac{1.1\times10^{-20} kg}{2.5\times10^{-3}}\times 100\% = \boxed{4.5\times10^{-16}\%}"/>
+  ]}
+/>
+
+# FAQ
+
+<Dropdown
+  title={["Why isn't the elementary charge defined as ", <InlineMath math="1 C"/>,"?"]}
+  body="In 1785, Coulombs' Law was first established with Charles-Augustin de Coulomb experiments'. However, electrons were not discovered till 1897. 
+  In his experiments, Coulomb then defined one Coulomb to be the smallest force his experiments could observe. When the charge on the electron was determined, it
+  just so happened to be approxiamtely 1.6times ten to the negative nineteenth power of one Coulomb."
+/>
