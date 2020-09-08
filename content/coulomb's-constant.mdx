@@ -1,15 +1,14 @@
 ---
 title: "Coulomb's Constant"
-metaTitle: "This is the title tag of this page"
+metaTitle: "Coulomb's Constant"
 metaDescription: "This is the meta description"
 ---
 import Dropdown from '../src/components/mdxComponents/dropdown'
+import Callout from "../src/components/mdxComponents/callout";
 import 'katex/dist/katex.min.css';
 import { InlineMath, BlockMath } from 'react-katex';
 
-$$
-k = \frac1{4\pi\epsilon_0}
-$$
+<Callout body={[<BlockMath math="k = \frac1{4\pi\epsilon_0}"/>]}/>
 
 - $k$ is a special constant used in multiple formulas. $k$ is often written instead of $\frac1{4\pi\epsilon_0}$ because it is used frequently.
 - $k ≈ 8.988\times10^9 \frac{Nm^2}{C^2}$

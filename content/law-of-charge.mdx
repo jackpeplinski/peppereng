@@ -1,10 +1,11 @@
 ---
 title: "Law of Charge"
-metaTitle: "This is the title tag of this page"
+metaTitle: "Law of Charge"
 metaDescription: "This is the meta description"
 ---
-import Dropdown from '../src/components/mdxComponents/dropdown'
+import Dropdown from '../src/components/mdxComponents/dropdown';
+import Callout from "../src/components/mdxComponents/callout";
 import 'katex/dist/katex.min.css';
 import { InlineMath, BlockMath } from 'react-katex';
 
-Total charge is constant in any process.
+<Callout body={["Total charge is constant in any process.", <BlockMath math="q_{initial}=q_{final}"/>]}/>

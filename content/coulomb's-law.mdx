@@ -1,22 +1,35 @@
 ---
 title: "Coulomb's Law"
-metaTitle: "This is the title tag of this page"
+metaTitle: "Coulomb's Law"
 metaDescription: "This is the meta description"
 ---
-import Dropdown from '../src/components/mdxComponents/dropdown'
+import Dropdown from '../src/components/mdxComponents/dropdown';
+import Callout from "../src/components/mdxComponents/callout";
 import 'katex/dist/katex.min.css';
 import { InlineMath, BlockMath } from 'react-katex';
+import Image from "../static/test.png";
 
-$$
-\overrightarrow{F} =k\frac{|q_1||q_2|}{r^2}\widehat{r}
-$$
+console.log(Image)
+
+<Callout body={<BlockMath math="\overrightarrow{F} =k\frac{|q_1||q_2|}{r^2}\widehat{r}"/>}/>
 
 - $F$ = Electrostatic force
 - $|q1|$, $|q2|$ = magnitude of two charges
 - $r^2$ = distance between the two charges
-- $k ≈ 8.988\times10^9 \frac{Nm^2}{C^2}$, Coulomb's Constant
+- $k ≈ 8.9\times10^9 \frac{Nm^2}{C^2}$, Coulomb's Constant
 - $\widehat{r}$ = the unit vector of $F$
 
 The electrostatic force between two charged particles.
 
 # Problems
+<Dropdown 
+  title={["Two particles with equal charge experience a force of 10 nN when they are 15 cm equidistant to each other. What is the magnitude of the charge on each particle?"]} 
+  body={[
+    <BlockMath math="\overrightarrow{F} =k\frac{|q_1||q_2|}{r^2}"/>,
+    <BlockMath math="\text{because the charges are equal }|q_1|=|q_2|=q"/>,
+    <BlockMath math="\overrightarrow{F} =k\frac{q^2}{r^2}"/>,
+    <BlockMath math="\sqrt{\frac{\overrightarrow{F}r^2}{k}}=q"/>,
+    <BlockMath math="\sqrt{\frac{{10\times10^{-19}\text{N}}(30\times10^{-2})^2\text{m}}{8.9\times10^9\frac{Nm^2}{C^2}}}=q"/>,
+    <BlockMath math="-3.2\times10^{-10} \text{C} = q"/>,
+  ]}
+/>

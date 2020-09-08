@@ -1,11 +1,14 @@
 ---
 title: "Electric Charge"
-metaTitle: "This is the title tag of this page"
+metaTitle: "Electric Charge"
 metaDescription: "This is the meta description"
 ---
-import Dropdown from '../src/components/mdxComponents/dropdown'
+import Dropdown from "../src/components/mdxComponents/dropdown";
+import Callout from "../src/components/mdxComponents/callout";
+import "katex/dist/katex.min.css";
+import { InlineMath, BlockMath } from "react-katex";
 
-Electric charge ($q$, $Q$, or simply 'charge') is a property of physical matter measured in Coulombs ($C$). 
+<Callout body={["Electric charge (", <InlineMath math="q"/>, " , ", <InlineMath math="Q"/>, ", or simply, ", <InlineMath math="\text{charge}"/>, ") is a property of physical matter measured in Coulombs,", <InlineMath math="\text{C}"/>, "."]} />
 
 - Charges are either positive ($+$) or negative ($-$).
 - Unlike charges attract each other; like charges repel each other.
