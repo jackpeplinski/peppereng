@@ -1,16 +1,25 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import 'katex/dist/katex.min.css';
-import { InlineMath, BlockMath } from 'react-katex';
+
+const DropdownStyled = styled('div')`
+  margin: 0 0 20px 0;
+`;
+
+const P = styled('p')`
+  padding: 20px;
+  background-color: ${({ theme }) => theme.colors.highlight};
+`;
 
 const Dropdown = (props) => {
   return (
-    <div>
-      <details id="problem">
+    <DropdownStyled>
+      <details>
         <summary>{props.title}</summary>
-        <p>{props.body}</p>
+        <img src={props.image}></img>
+        <P>{props.body}</P>
       </details>
-    </div>
+    </DropdownStyled>
   )
 }
+
 export default Dropdown
