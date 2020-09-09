@@ -4,14 +4,15 @@ const config = require("./config");
 const plugins = [
   'gatsby-plugin-sitemap',
   'gatsby-plugin-sharp',
+  'gatsby-remark-images',
+  'gatsby-plugin-emotion',
+  'gatsby-plugin-react-helmet',
   {
     resolve: `gatsby-plugin-layout`,
     options: {
       component: require.resolve(`./src/templates/docs.js`)
     }
   },
-  'gatsby-plugin-emotion',
-  'gatsby-plugin-react-helmet',
   {
     resolve: "gatsby-source-filesystem",
     options: {

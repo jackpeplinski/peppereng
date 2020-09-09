@@ -4,32 +4,66 @@ metaTitle: "Coulomb's Law"
 metaDescription: "This is the meta description"
 ---
 import Dropdown from '../src/components/mdxComponents/dropdown';
-import Callout from "../src/components/mdxComponents/callout";
+import Callout from '../src/components/mdxComponents/callout';
+import Divider from '../src/components/mdxComponents/divider';
 import 'katex/dist/katex.min.css';
 import { InlineMath, BlockMath } from 'react-katex';
-import Image from "../static/test.png";
-
-console.log(Image)
+import CoulombsLaw1 from "./assets/coulomb's-law-1.svg"
+import CoulombsLaw2 from "./assets/coulomb's-law-2.svg"
 
 <Callout body={<BlockMath math="\overrightarrow{F} =k\frac{|q_1||q_2|}{r^2}\widehat{r}"/>}/>
 
 - $F$ = Electrostatic force
 - $|q1|$, $|q2|$ = magnitude of two charges
 - $r^2$ = distance between the two charges
-- $k ≈ 8.9\times10^9 \frac{Nm^2}{C^2}$, Coulomb's Constant
+- $k ≈ 8.9\times10^9 \frac{\text{Nm}^2}{\text{C}^2}$, Coulomb's Constant
 - $\widehat{r}$ = the unit vector of $F$
-
-The electrostatic force between two charged particles.
 
 # Problems
 <Dropdown 
   title={["Two particles with equal charge experience a force of 10 nN when they are 15 cm equidistant to each other. What is the magnitude of the charge on each particle?"]} 
   body={[
+    <InlineMath math="\text{Diagram:}"/>,
+    <img src={CoulombsLaw1}/>,
+    <Divider/>,
+    <InlineMath math="\text{Solution:}"/>,
     <BlockMath math="\overrightarrow{F} =k\frac{|q_1||q_2|}{r^2}"/>,
     <BlockMath math="\text{because the charges are equal }|q_1|=|q_2|=q"/>,
     <BlockMath math="\overrightarrow{F} =k\frac{q^2}{r^2}"/>,
     <BlockMath math="\sqrt{\frac{\overrightarrow{F}r^2}{k}}=q"/>,
-    <BlockMath math="\sqrt{\frac{{10\times10^{-19}\text{N}}(30\times10^{-2})^2\text{m}}{8.9\times10^9\frac{Nm^2}{C^2}}}=q"/>,
+    <BlockMath math="\sqrt{\frac{{10\times10^{-19}}(30\times10^{-2})^2}{8.9\times10^9}}=q"/>,
     <BlockMath math="-3.2\times10^{-10} \text{C} = q"/>,
+  ]}
+/>
+
+<Dropdown 
+  title="If you double the distance between two point charges, by which factor does the force between the particles change?"
+  body={[
+    <BlockMath math="\text{The force is given by} \overrightarrow{F} =k\frac{|q_1||q_2|}{r^2}"/>,
+    <BlockMath math="\text{Increasing the distance will affect the force, we can label this affect as } x \text{ below.}"/>,
+    <BlockMath math="x\overrightarrow{F} =k\frac{|q_1||q_2|}{(2r)^2}"/>,
+    <BlockMath math="x\overrightarrow{F} =k\frac{|q_1||q_2|}{4(r^2)}"/>,
+    <BlockMath math="x\overrightarrow{F} =\frac{1}{4}\underbrace{k\frac{|q_1||q_2|}{r^2}}_{\overrightarrow{F}}"/>,
+    <BlockMath math="x\space\cancel{\overrightarrow{F}} = \frac{1}{4}\cancel{\overrightarrow{F}}"/>,
+    <BlockMath math="x=\frac{1}{4}"/>,
+    <BlockMath math="\text{Doubling the distance decreases the force between the particles by a factor of }\frac{1}{4}."/>,
+  ]}
+/>
+
+<Dropdown
+  title={["Point charges ", <InlineMath math="q_1=50 \mu \text{C}"/>, " and ", <InlineMath math="q_2=-25 \mu \text{C}"/>, " are placed 1.0 m apart. What is the force on a third charge ", <InlineMath math="q_3=20 \mu \text{C}"/>, " placed midway between ", <InlineMath math="q_1"/>, " and ", <InlineMath math="q_2"/>, "?"]}
+  body={[
+    <InlineMath math="\text{Diagram:}"/>,
+    <img src={CoulombsLaw2}/>,
+    <Divider/>,
+    <InlineMath math="\text{Solution:}"/>,
+    <BlockMath math="\overrightarrow{F}_{net} = \overrightarrow{F}_1 + \overrightarrow{F}_2"/>,
+    <BlockMath math="\text{The forces are given by} \overrightarrow{F} =k\frac{|q_1||q_2|}{r^2}"/>,
+    <BlockMath math="\overrightarrow{F_1} = (8.9\times10^{9}) \frac{(50\times10^{-6})(20\times10^{-6})}{0.5^2}"/>,
+    <BlockMath math="\overrightarrow{F_1} = 36 \text{N}"/>,
+    <BlockMath math="\overrightarrow{F_2} = (8.9\times10^{9}) \frac{(25\times10^{-6})(20\times10^{-6})}{0.5^2}"/>,
+    <BlockMath math="\overrightarrow{F_1} = 18 \text{N}"/>,
+    <BlockMath math="\overrightarrow{F}_{net} = \overrightarrow{F}_1 + \overrightarrow{F}_2
+= 36\text{N}\space +\space 18\text{N} = \boxed{54 \text{N}}"/>,
   ]}
 />
