@@ -26,7 +26,7 @@ export default class MDXRuntimeTest extends Component {
     } = data;
 
     const gitHub = require('../components/images/github.svg');
-
+        
     const navItems = allMdx.edges
       .map(({ node }) => node.fields.slug)
       .filter(slug => slug !== '/')
@@ -84,20 +84,16 @@ export default class MDXRuntimeTest extends Component {
           {metaDescription ? <meta name="description" content={metaDescription} /> : null}
           {metaTitle ? <meta property="og:title" content={metaTitle} /> : null}
           {metaDescription ? <meta property="og:description" content={metaDescription} /> : null}
-          {metaTitle ? <meta property="twitter:title" content={metaTitle} /> : null}
-          {metaDescription ? (
-            <meta property="twitter:description" content={metaDescription} />
-          ) : null}
           <link rel="canonical" href={canonicalUrl} />
         </Helmet>
         <div className={'titleWrapper'}>
           <StyledHeading>{mdx.fields.title}</StyledHeading>
           <Edit className={'mobileView'}>
-            {docsLocation && (
+            {/* {docsLocation && (
               <Link className={'gitBtn'} to={`${docsLocation}/${mdx.parent.relativePath}`}>
                 <img src={gitHub} alt={'Github logo'} /> Edit on GitHub
               </Link>
-            )}
+            )} */}
           </Edit>
         </div>
         <StyledMainWrapper>
