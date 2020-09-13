@@ -10,7 +10,7 @@ const StyledCallout = styled('div')`
 const Callout = (props) => {
   return (
     <StyledCallout>
-      <p>{props.body}</p>
+      <div>{props.body}</div>
     </StyledCallout>
   )
 }
