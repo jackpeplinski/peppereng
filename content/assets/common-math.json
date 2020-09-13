@@ -1,0 +1,18 @@
+{
+  "coulombsLaw":"\\overrightarrow{F} = k \\frac{ |q_1| |q_2| } { r^2 }",
+  "coulombsLawFullVector":"\\overrightarrow{F} = k \\frac{ |q_1| |q_2| }{ r^2 }  \\widehat{r}",
+  "coulombsLawNoForce":"\frac{ |q_1| |q_2| } { r^2 }",
+  "electricFieldForce":"\\overrightarrow{E}=\\frac{\\overrightarrow{F}}{| q_{test} |}",
+  "electricField":"\\overrightarrow{E}=k\\frac{| q_{source} |}{r ^ 2}",
+  "qTest":"q_{test}",
+  "qSource":"q_{source}",
+  "qTestAbs":"|q_{test}|",
+  "qSourceAbs":"|q_{source}|",
+  "EVector":"\\overrightarrow{E}",
+  "FVector":"\\overrightarrow{F}",
+  "coulombsConstant":"\\frac1{4\\pi\\epsilon_0}",
+  "coulombsConstantKApprox":"k ≈ 8.98\\times10^9 \\frac{\\text{Nm}^2}{\\text{C}^2}",
+  "coulombsConstantApprox":"8.98\\times10^9 \\frac{\\text{Nm}^2}{\\text{C}^2}",
+  "vacuumPermittivity":"\\epsilon_0 ≈ 8.85\\times10^{-12} \\frac{\\text{F}}{\\text{m}}",
+  "elementaryCharge":"-1.6×10^{-19} \\text{C}"
+}
