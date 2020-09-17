@@ -6,10 +6,14 @@ metaDescription: "This is the meta description"
 import Dropdown from '../src/components/mdxComponents/dropdown'
 import Callout from "../src/components/mdxComponents/callout";
 import { InlineMath, BlockMath } from 'react-katex';
+import CommonMathData from "./assets/common-math.json";
 
-<Callout body={[<BlockMath math="k = \frac1{4\pi\epsilon_0}"/>]}/>
+<Callout body={<span>
+  <InlineMath math={"k = "+CommonMathData.coulombsConstant+"≈"+CommonMathData.coulombsConstantApprox}/>
+  </span>
+}/>
 
-- $k$ is a special constant used in multiple formulas. $k$ is often written instead of $\frac1{4\pi\epsilon_0}$ because it is used frequently.
-- $k ≈ 8.988\times10^9 \frac{Nm^2}{C^2}$
-- $\epsilon_0 ≈ 8.8541\times10^-12 \frac{F}{m}$, vacuum permittivity, permittivity of free space, or electric constant
-- $\epsilon_0$ pronounced 'epsilon naught'.
+- $k$ is Coulomb's Constant
+- $k$ is often written as a shorthand instead of the exact value, <InlineMath math={CommonMathData.coulombsConstant}/>
+- $\epsilon_0$ (pronounced 'epsilon naught') is the electric constant. It is a measure of the capability of an electric field to permeate in a vaccum.
+- <InlineMath math={CommonMathData.vacuumPermittivity}/> 

@@ -7,16 +7,17 @@ import Dropdown from '../src/components/mdxComponents/dropdown';
 import Callout from '../src/components/mdxComponents/callout';
 import Divider from '../src/components/mdxComponents/divider';
 import { InlineMath, BlockMath } from 'react-katex';
+import CommonMathData from "./assets/common-math.json";
+
 import CoulombsLaw1 from "./assets/coulomb's-law-1.svg"
 import CoulombsLaw2 from "./assets/coulomb's-law-2.svg"
 
-<Callout body={<BlockMath math="\overrightarrow{F} =k\frac{|q_1||q_2|}{r^2}\widehat{r}"/>}/>
+<Callout body={<BlockMath math={CommonMathData.coulombsLaw}/>}/>
 
-- $F$ = Electrostatic force
-- $|q1|$, $|q2|$ = magnitude of two charges
-- $r^2$ = distance between the two charges
-- $k ≈ 8.9\times10^9 \frac{\text{Nm}^2}{\text{C}^2}$, Coulomb's Constant
-- $\widehat{r}$ = the unit vector of $F$
+- $F =$ Electrostatic force
+- $|q1|$, $|q2| =$ magnitude of two charges
+- $r^2 = $ distance between the two charges
+- <InlineMath math={CommonMathData.coulombsConstantKApprox}/>, Coulomb's Constant
 
 # Problems
 <Dropdown 
@@ -24,28 +25,30 @@ import CoulombsLaw2 from "./assets/coulomb's-law-2.svg"
   body={[
     <InlineMath math="\text{Diagram:}"/>,
     <img src={CoulombsLaw1}/>,
+    "Equidistant means equal distance from each other. ",
+    "Therefore, the charges are 15 cm from the midpoint between them and a total of 30 cm away from each other.",
     <Divider/>,
     <InlineMath math="\text{Solution:}"/>,
-    <BlockMath math="\overrightarrow{F} =k\frac{|q_1||q_2|}{r^2}"/>,
+    <BlockMath math={CommonMathData.coulombsLaw}/>,
     <BlockMath math="\text{because the charges are equal }|q_1|=|q_2|=q"/>,
     <BlockMath math="\overrightarrow{F} =k\frac{q^2}{r^2}"/>,
     <BlockMath math="\sqrt{\frac{\overrightarrow{F}r^2}{k}}=q"/>,
     <BlockMath math="\sqrt{\frac{{10\times10^{-19}}(30\times10^{-2})^2}{8.9\times10^9}}=q"/>,
-    <BlockMath math="-3.2\times10^{-10} \text{C} = q"/>,
+    <BlockMath math="\boxed{-3.2\times10^{-10} \text{C} = q}"/>,
   ]}
 />
 
 <Dropdown 
   title="If you double the distance between two point charges, by which factor does the force between the particles change?"
   body={[
-    <BlockMath math="\text{The force is given by} \overrightarrow{F} =k\frac{|q_1||q_2|}{r^2}"/>,
+    <BlockMath math={"\\text{The force is given by: }"+CommonMathData.coulombsLaw}/>,
     <BlockMath math="\text{Increasing the distance will affect the force, we can label this affect as } x \text{ below.}"/>,
     <BlockMath math="x\overrightarrow{F} =k\frac{|q_1||q_2|}{(2r)^2}"/>,
     <BlockMath math="x\overrightarrow{F} =k\frac{|q_1||q_2|}{4(r^2)}"/>,
     <BlockMath math="x\overrightarrow{F} =\frac{1}{4}\underbrace{k\frac{|q_1||q_2|}{r^2}}_{\overrightarrow{F}}"/>,
     <BlockMath math="x\space\cancel{\overrightarrow{F}} = \frac{1}{4}\cancel{\overrightarrow{F}}"/>,
     <BlockMath math="x=\frac{1}{4}"/>,
-    <BlockMath math="\text{Doubling the distance decreases the force between the particles by a factor of }\frac{1}{4}."/>,
+    <BlockMath math="\boxed{\text{Doubling the distance decreases the force between the particles by a factor of }\frac{1}{4}.}"/>,
   ]}
 />
 
@@ -57,7 +60,7 @@ import CoulombsLaw2 from "./assets/coulomb's-law-2.svg"
     <Divider/>,
     <InlineMath math="\text{Solution:}"/>,
     <BlockMath math="\overrightarrow{F}_{net} = \overrightarrow{F}_1 + \overrightarrow{F}_2"/>,
-    <BlockMath math="\text{The forces are given by} \overrightarrow{F} =k\frac{|q_1||q_2|}{r^2}"/>,
+    <BlockMath math={"\\text{The force is given by: }"+CommonMathData.coulombsLaw}/>,
     <BlockMath math="\overrightarrow{F_1} = (8.9\times10^{9}) \frac{(50\times10^{-6})(20\times10^{-6})}{0.5^2}"/>,
     <BlockMath math="\overrightarrow{F_1} = 36 \text{N}"/>,
     <BlockMath math="\overrightarrow{F_2} = (8.9\times10^{9}) \frac{(25\times10^{-6})(20\times10^{-6})}{0.5^2}"/>,
