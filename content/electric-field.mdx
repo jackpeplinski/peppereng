@@ -1,0 +1,30 @@
+---
+title: "Electric Field"
+metaTitle: "Electric Field"
+metaDescription: "This is the meta description"
+---
+import Dropdown from '../src/components/mdxComponents/dropdown';
+import Callout from '../src/components/mdxComponents/callout';
+import Divider from '../src/components/mdxComponents/divider';
+import { InlineMath, BlockMath } from 'react-katex';
+import ElectricField1 from "./assets/electric-field-1.jpg";
+import ElectricField2 from "./assets/electric-field-2.jpg";
+
+
+<Callout body="An electric field is a immaterial substance created by charges that radiates outwards, filling all space, to ±∞ in all directions."/>
+
+The following conventions are followed:
+- Field lines must begin on positive charges and terminate on negative charges, or at infinity in the hypothetical case of isolated charges.
+- The number of field lines leaving a positive charge or entering a negative charge is proportional to the magnitude of the charge.
+- The strength of the field is proportional to the closeness of the field lines—more precisely, it is proportional to the number of lines per unit area perpendicular to the lines.
+- The direction of the electric field is tangent to the field line at any point in space.
+- Field lines can never cross.
+
+<img src={ElectricField1}/>
+<img src={ElectricField2}/>
+
+# FAQ
+<Dropdown
+  title = "Are electric fields generated instantly?"
+  body = "Electric fields travel at the same speed as light from charges."
+/>

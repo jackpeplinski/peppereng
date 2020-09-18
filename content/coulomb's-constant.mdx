@@ -1,0 +1,19 @@
+---
+title: "Coulomb's Constant"
+metaTitle: "Coulomb's Constant"
+metaDescription: "This is the meta description"
+---
+import Dropdown from '../src/components/mdxComponents/dropdown'
+import Callout from "../src/components/mdxComponents/callout";
+import { InlineMath, BlockMath } from 'react-katex';
+import CommonMathData from "./assets/common-math.json";
+
+<Callout body={<span>
+  <InlineMath math={"k = "+CommonMathData.coulombsConstant+"≈"+CommonMathData.coulombsConstantApprox}/>
+  </span>
+}/>
+
+- $k$ is Coulomb's Constant
+- $k$ is often written as a shorthand instead of the exact value, <InlineMath math={CommonMathData.coulombsConstant}/>
+- $\epsilon_0$ (pronounced 'epsilon naught') is the electric constant. It is a measure of the capability of an electric field to permeate in a vaccum.
+- <InlineMath math={CommonMathData.vacuumPermittivity}/> 

@@ -1,0 +1,18 @@
+---
+title: "Charge Density"
+metaTitle: "Charge Density"
+metaDescription: "This is the meta description"
+---
+import Dropdown from '../src/components/mdxComponents/dropdown';
+import Callout from '../src/components/mdxComponents/callout';
+import Divider from '../src/components/mdxComponents/divider';
+import { InlineMath, BlockMath } from 'react-katex';
+import CommonMathData from "./assets/common-math.json";
+
+The charge density on an object can be determined by the dimension of the object:
+
+| Symbol | Description            | Formula | Units |
+|--------|------------------------|---------|-------|
+|$\lambda$  | (1D) linear charge density  |<InlineMath math="\frac{q}{\text{length}}"/>       |<InlineMath math="\frac{\text{C}}{\text{m}}"/>         |
+|$\sigma$   | (2D) surface charge density |<InlineMath math="\frac{q}{\text{area}}"/>       |<InlineMath math="\frac{ \text{C} } { \text{m}^{2}}"/> |
+|$\rho$     | (3D) volume charge density  |<InlineMath math="\frac{q}{\text{volume}}"/>      |<InlineMath math="\frac{ \text{C} } { \text{m}^{3} }"/>      |

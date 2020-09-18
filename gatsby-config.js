@@ -4,14 +4,15 @@ const config = require("./config");
 const plugins = [
   'gatsby-plugin-sitemap',
   'gatsby-plugin-sharp',
+  'gatsby-remark-images',
+  'gatsby-plugin-emotion',
+  'gatsby-plugin-react-helmet',
   {
     resolve: `gatsby-plugin-layout`,
     options: {
-        component: require.resolve(`./src/templates/docs.js`)
+      component: require.resolve(`./src/templates/docs.js`)
     }
   },
-  'gatsby-plugin-emotion',
-  'gatsby-plugin-react-helmet',
   {
     resolve: "gatsby-source-filesystem",
     options: {
@@ -34,7 +35,7 @@ const plugins = [
           resolve: 'gatsby-remark-copy-linked-files'
         },
         {
-          resolve:'gatsby-remark-katex',
+          resolve: 'gatsby-remark-katex',
         }
       ],
       extensions: [".mdx", ".md"]
@@ -61,14 +62,15 @@ if (config.header.search && config.header.search.enabled && config.header.search
       apiKey: config.header.search.algoliaAdminKey, // algolia admin key to index
       queries,
       chunkSize: 10000, // default: 1000
-    }}
+    }
+  }
   )
 }
 // check and add pwa functionality
 if (config.pwa && config.pwa.enabled && config.pwa.manifest) {
   plugins.push({
-      resolve: `gatsby-plugin-manifest`,
-      options: {...config.pwa.manifest},
+    resolve: `gatsby-plugin-manifest`,
+    options: { ...config.pwa.manifest },
   });
   plugins.push({
     resolve: 'gatsby-plugin-offline',
