@@ -36,6 +36,25 @@ import DeriveElectricField from "../src/components/mdxComponents/mathComponents/
 # FAQ
 <Dropdown 
   title = {<span>
+    How are <InlineMath math={"q_{test}"}/> and <InlineMath math={"q_{source}"}/> different?
+  </span>}
+  body = {<span>
+    Both <InlineMath math={"q_{test}"}/> and <InlineMath math={"q_{source}"}/> are charges. <InlineMath math={"q_{source}"}/> is a regular charge meaning it:
+    <ul>
+      <li>emits an electric field</li>
+      <li>that electric field creates an electrostatic force on particle it encounters</li>
+    </ul>
+    Meanwhile, we assume <InlineMath math={"q_{test}"}/> does not:
+    <ul>
+      <li>emit an electric field</li>
+      <li>without an electric field, an electrostatic force cannot be generated</li>
+    </ul>
+    <InlineMath math={"q_{test}"}/> is only a theoretical particle (it  could not exist in reality) that detect the electric field's strength.
+  </span>}
+/>
+
+<Dropdown 
+  title = {<span>
     How can we assume <InlineMath math="q_{test}"/> produces both a negligible electric field and force on <InlineMath math="q_{source}"/>? Is there a relationship between the electric field-force, electric field, and Coulomb's Law formulas?
     How is the strength of <InlineMath math={CommonMathData.EVector}/> independent of <InlineMath math="q_{test}"/>?
   </span>}
